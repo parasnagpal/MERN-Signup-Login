@@ -10,9 +10,8 @@ class Individual extends React.Component{
     }
 
     expand_signup(){
-        console.log('expanding')
-        document.getElementById("signup-col").classList.add('expand')
         document.getElementById("login-col").classList.add('shrink')
+        document.getElementById("signup-col").classList.add('expand')
     }
 
     render(){
@@ -24,7 +23,9 @@ class Individual extends React.Component{
                             <LoginIndividual/>
                         </Container> 
                     </Col>
-                    <Col className="d-flex flex-column justify-content-center bg-danger" id="signup-col" ><SignUpIndividual expand={this.expand_signup}/></Col>
+                    <Col className="d-flex flex-column justify-content-center bg-danger" id="signup-col" >
+                        <SignUpIndividual expand={this.expand_signup}/>
+                    </Col>
                 </Row>
             </Container>
         );

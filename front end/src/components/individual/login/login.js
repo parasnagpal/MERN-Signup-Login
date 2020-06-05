@@ -10,7 +10,11 @@ class LoginIndividual extends React.Component{
                     <Form>
                         <FormGroup>
                             <Input placeholder="Email" className="bg-light"/>
+                        </FormGroup>
+                        <FormGroup>    
                             <Input placeholder="Password" className="bg-light"/>
+                        </FormGroup>
+                        <FormGroup>
                         <Button color="danger" className="rounded m-2">Sign In</Button>
                         </FormGroup>
                     </Form>
