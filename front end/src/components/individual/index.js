@@ -35,7 +35,7 @@ class Individual extends React.Component{
 
     signup(signup_data){
         console.log(signup_data);
-        axios.post('https://a0d1abc26b8c.ngrok.io/signup',signup_data)
+        axios.post('http://localhost:8000/signup',signup_data)
         .then(response=>{
             console.log(response);
         })
