@@ -10,7 +10,10 @@ class SignUpIndividual extends React.Component{
             password:"",
             password_confirm:"",
             individual:false,
-            organization:false
+            organization:false,
+            bio:null,
+            linkedin:null,
+            profile_image:null
         }
         this.signup=this.signup.bind(this);
         this.emailchange=this.emailchange.bind(this);
