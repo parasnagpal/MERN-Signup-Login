@@ -32,9 +32,10 @@ app.post('/login',async function(req,res){
         password:req.body.password
     })
     .toArray((err,data)=>{
-        //console.log(data.length)
         if(data.length===0)
             res.status(400).json("Invalid login credentials");
+        else if(!data[0].profilecomplete)
+            res.status(200).json("profile");    
         else    
             res.status(200).json("Individual Login Success");
     })
@@ -45,9 +46,10 @@ app.post('/login',async function(req,res){
         password:req.body.password
     })
     .toArray((err,data)=>{
-        //console.log(data.length)
         if(data.length===0)
             res.status(400).json("Invalid login credentials");
+        else if(!data[0].profilecomplete)
+            res.status(200).json("profile");        
         else    
             res.status(200).json("Organisation Login Success");
     })
